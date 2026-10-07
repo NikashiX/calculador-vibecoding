@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2f4f8" />
+    <meta name="description" content="Calculadora simples, acessível e responsiva." />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator" aria-label="Calculadora">
+      <header class="calculator__header">
+        <div class="brand" aria-label="Calculadora básica">
+          <span class="brand__mark" aria-hidden="true">∑</span>
+          <span class="brand__name">Calculadora</span>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">
+          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+        </button>
+      </header>
+
+      <section class="display" aria-label="Visor">
+        <div class="display__expression" id="expression" aria-live="polite" aria-atomic="true"></div>
+        <output class="display__value" id="display" aria-live="assertive" aria-atomic="true">0</output>
+      </section>
+
+      <section class="keypad" aria-label="Teclas da calculadora">
+        <button class="key key--function" type="button" data-action="clear" aria-label="Limpar tudo">AC</button>
+        <button class="key key--function" type="button" data-action="sign" aria-label="Inverter sinal">+/−</button>
+        <button class="key key--function" type="button" data-action="percent" aria-label="Porcentagem">%</button>
+        <button class="key key--operator" type="button" data-operator="/" aria-label="Dividir">÷</button>
+
+        <button class="key" type="button" data-digit="7">7</button>
+        <button class="key" type="button" data-digit="8">8</button>
+        <button class="key" type="button" data-digit="9">9</button>
+        <button class="key key--operator" type="button" data-operator="*" aria-label="Multiplicar">×</button>
+
+        <button class="key" type="button" data-digit="4">4</button>
+        <button class="key" type="button" data-digit="5">5</button>
+        <button class="key" type="button" data-digit="6">6</button>
+        <button class="key key--operator" type="button" data-operator="-" aria-label="Subtrair">−</button>
+
+        <button class="key" type="button" data-digit="1">1</button>
+        <button class="key" type="button" data-digit="2">2</button>
+        <button class="key" type="button" data-digit="3">3</button>
+        <button class="key key--operator" type="button" data-operator="+" aria-label="Somar">+</button>
+
+        <button class="key key--zero" type="button" data-digit="0">0</button>
+        <button class="key" type="button" data-action="decimal" aria-label="Ponto decimal">.</button>
+        <button class="key" type="button" data-action="backspace" aria-label="Apagar último dígito">⌫</button>
+        <button class="key key--equals" type="button" data-action="equals" aria-label="Calcular resultado">=</button>
+      </section>
+
+      <p class="keyboard-hint">Dica: use o teclado para digitar · Esc limpa</p>
+    </main>
+  </body>
+</html>
